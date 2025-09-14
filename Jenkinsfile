@@ -3,9 +3,11 @@ def configMap = [
     PROJECT : "roboshop",
     COMPONENT : "cart"
 ]
-if ( ! env.BRANCH_NAME.equalsIgnoreCase('main') ){
-    nodejsEKSPipeline(configMap)
+/* if ( ! env.BRANCH_NAME.equalsIgnoreCase('main') ){
+    nodejsEKSpipeline(configMap)
 }
 else {
     echo 'Please Proceed with PROD Process'
-}
+} */
+
+nodejsEKSpipeline(configMap)
